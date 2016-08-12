@@ -1,0 +1,35 @@
+1. npm init
+
+2. npm install moment-timezone
+
+3. write the code in .js file with: 
+   var moment = require('moment-timezone');
+
+4. Eg:
+   var our_time = moment.tz("2013-11-18 11:55", "America/Toronto");
+   var required_time = our_time.tz("Japan").format();
+
+   2013-11-18 11:55 - our time
+   America/Toronto - our timezone
+   tz("Japan") - Required timezone
+
+Reference : http://momentjs.com/timezone/docs/#/use-it/
+
+Sample Input :
+
+
+var moment= require('moment-timezone');
+var sampleDate=moment('20161207 01:30:00')
+var timeJapan= sampleDate.tz("Japan").format();
+var dayNumber= sampleDate.day();
+dayArray=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+day=dayArray[dayNumber-1];
+console.log("GMT is " + sampleDay.tz("GMT").format());
+console.log("in Japan "+ timeJapan);
+console.log("today is "+day);
+
+Sample Output :
+
+GMT is 2016-12-06T19:30:00Z
+in Japan 2016-12-07T04:30:00+09:00
+today is Wednesday

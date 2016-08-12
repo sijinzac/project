@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assig No: 2</title>
+</head>
+<body>
+
+  <form name="myReg" action="" onsubmit="return (validateReg());">
+    <h1 style="color:#87A85C"> Register</h1><br><br>
+    <fieldset>
+      <legend>REGISTER</legend>
+      <input style="color:#FFA500" type="text" placeholder="username" name = "username" required><br><br>
+      <input style="color:#FFA500" type="password" placeholder="password" name = "pwrd" required><br><br>
+      Address <br>
+      <textarea rows="4" cols="30">
+      </textarea><br><br>
+      <input style="color:#FFA500" type="email" placeholder="e-mail" name = "mail" required><br><br>
+      <input type="submit" value="Register" style = "background-color:green;border:2px solid #336600;padding:3px">
+    </fieldset>
+  </form>
+
+  <form name="myLogin" action="" onsubmit="return (validateLogin());">
+    <h1 style="color:#87A85C"> Login</h1><br><br>
+    <fieldset>
+      <legend>LOGIN</legend>
+        <input style="color:#FFA500" type="text" placeholder="username" name = "username" required><br><br>
+        <input style="color:#FFA500" type="password" placeholder="password" name = "pwrd" required><br><br>
+        <input type="submit" value="Log-in" style = "background-color:green;border:2px solid #336600;padding:3px">
+        <div id="welcomeMessage">
+
+        </div>
+      </fieldset>
+    </form>
+    <script src="regi.js">
+    </script>
+    <script src="login.js">
+    </script>
+  </body>
+  </html>

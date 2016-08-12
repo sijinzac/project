@@ -1,0 +1,15 @@
+function load() {
+var mydata = JSON.parse(data);
+var flag;
+console.log(mydata[0].fname);
+console.log(mydata[0].lname);
+
+if( (mydata[0].lname === null) &&  (mydata[0].fname === null) || (mydata[0].lname === "") &&  (mydata[0].fname === ""))) {
+  flag = false;
+  console.log(flag);
+}
+else {
+  flag = true;
+  console.log(flag);
+}
+}

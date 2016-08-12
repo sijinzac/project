@@ -1,0 +1,74 @@
+<html>
+<head>
+  <title>HOTEL GATEWAY</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</style>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+  header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+  }
+  body{
+    background-image: url("login.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: maroon;
+    text-align: center;
+  }
+  form {
+    display: inline-block;
+    text-align: center;
+    }
+
+  h1{
+    text-align: center;
+  }
+  footer {
+background-color:black;
+color:white;
+clear:both;
+text-align:center;
+padding:5px;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GATEWAY HOTEL</h1>
+  </header>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="hotel.htm">Home</a></li>
+        <li><a href="about.htm">ABOUT</a></li>
+        <li><a href="book.html">BOOK ROOM</a></li>
+        <li><a href="gall.htm">GALLERY</a></li>
+        <li><a href="con.htm">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+  <form name="myForm" action="succ.html">
+  <h1 style="color:#87A85C"> LOGIN</h1><br><br>
+  <fieldset>
+  <legend>Sign In</legend>
+  <br><br>
+  <input style="color:#FFA500" placeholder="Name" type="text" name = "username" required><br><br>
+  <br><br>
+  <input style="color:#FFA500" placeholder="Password"type="password" name = "pwrd" required><br><br>
+  <input type="submit" value="Login" style = "background-color:green;border:2px solid #336600;padding:3px">
+</fieldset>
+</form>
+</body>
+<footer>
+Copyright © Gateway.com
+</footer>
+</html>

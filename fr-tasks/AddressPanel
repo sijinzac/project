@@ -1,0 +1,110 @@
+import React, { PropTypes } from 'react';
+import { universalStyles, noop } from 'uniqlo-utils';
+import Panel from 'components/Panel';
+import styles from './styles.scss';
+
+const AddressPanel = (props) => {
+  const {
+    title,
+    firstName,
+    lastName,
+    salutation,
+    street,
+    city,
+    prefecture,
+    postalCode,
+    address,
+    apt,
+    email,
+    phoneNumber,
+    cellPhoneNumber,
+    frame,
+    className,
+    editable,
+    onEdit,
+    fromAccount,
+    prefix,
+  } = props;
+
+  let addressElement;
+  switch (addressElement) {
+       case fromAccount: <address className={styles.address}>
+                          <div>{salutation} {firstName} {lastName} </div>
+                          <div>{prefix}{postalCode}</div>
+                          <div>{prefecture}{street}</div>
+                          <div>{address}{apt}</div>
+                          <div>{phoneNumber}</div>
+                          <div>{cellPhoneNumber}</div>
+                          </address>
+                          break;
+
+       case fromDelivery: <address className={styles.address}>
+                          <div>{salutation} {firstName} {lastName} </div>
+                          <div>/*posatalPrefecture*/{postalCode}</div>
+                          <div>{prefecture}</div>
+                          <div>{aptRoomNum}</div>
+                          <div>{phoneNumber}</div>
+                          <div>{cellPhoneNumber}</div>
+                          </address>
+                          break;
+
+        default:          <address className={styles.address}>
+                          <div>{salutation} {firstName} {lastName} </div>
+                          <div>{street}</div>
+                          <div>{city}, {prefecture} {postalCode}</div>
+                          <div>{email}</div>
+                          {phoneNumber}
+                          </address>;
+
+      }
+  return (
+    <Panel
+      title={title}
+      className={styles[className] || className}
+      frame={frame}
+      editable={editable}
+      onEdit={onEdit}>
+      {addressElement}
+    </Panel>
+  );
+};
+
+const { object, bool, string, func } = PropTypes;
+AddressPanel.propTypes = {
+  title: string,
+  lastName: string,
+  firstName: string,
+  salutation: string,
+  street: string,
+  city: string,
+  prefecture: string,
+  postalCode: string,
+  email: string,
+  phoneNumber: string,
+  className: string,
+  frame: bool,
+  editable: bool,
+  onEdit: func,
+  fromAccount: bool,
+  prefix: string,
+  cellPhoneNumber: string,
+  address: string,
+  apt: string,
+};
+
+AddressPanel.defaultProps = {
+  onEdit: noop,
+  fromAccount: false,
+  mobNo: '',
+};
+
+AddressPanel.contextTypes = {
+  i18n: object,
+};
+
+export default universalStyles(styles)(AddressPanel);
+export {
+  AddressPanel as AddressPanelTest,
+  styles as cssClassNames,
+};
+
